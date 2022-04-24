@@ -30,9 +30,6 @@ class EtudiantController extends Controller
             ->where('etudiants.id','=',$id)
             ->first();
 
-
-
-
         return view('details', ['etudiant' => $etudiant]);
 
     }
@@ -46,6 +43,7 @@ class EtudiantController extends Controller
 
     public function save(Request $request)
     {
+
         $newetudiant = Etudiant::create([
             'nom' => $request->nom,
             'adresse' => $request->adresse,
@@ -69,11 +67,10 @@ class EtudiantController extends Controller
             'etudiant' => $etudiant]);
     }
 
-    public function edit(Request $request )
+    public function edit(Request $request)
     {
         $id = $request->id;
         $etudiant = Etudiant::find($id);
-
 
         $etudiant->update([
             'nom' => $request->nom,
@@ -92,4 +89,5 @@ class EtudiantController extends Controller
         Etudiant::destroy($id);
         return redirect('/etudiants');
     }
+
 }

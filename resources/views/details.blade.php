@@ -2,7 +2,7 @@
 @extends('layout')
 @section('content')
     <div class="container">
-        <h1>Détails de l'etudiant {{$etudiant->etudiant_id}} </h1>
+        <h1>@lang('lang.details_student') {{$etudiant->etudiant_id}} </h1>
 
 
         <table class="table table-sm">
@@ -10,15 +10,15 @@
             <tbody>
 
                 <tr>
-                    <td>Nom :</td>
+                    <td>@lang('lang.nom') :</td>
                     <td>{{$etudiant->nom}} </td>
                 </tr>
                 <tr>
-                    <td>Adresse :</td>
+                    <td>@lang('lang.adress') :</td>
                     <td>{{$etudiant->adresse}} </td>
                 </tr>
                 <tr>
-                    <td>Phone :</td>
+                    <td>Tel :</td>
                     <td>{{$etudiant->phone}} </td>
                 </tr>
 
@@ -27,18 +27,18 @@
                     <td>{{$etudiant->email}} </td>
                 </tr>
                 <tr>
-                    <td>Date de naissance :</td>
+                    <td>@lang('lang.birth_date') :</td>
                     <td>{{$etudiant->naissance}} </td>
                 </tr>
                 <tr>
-                    <td>Ville :</td>
+                    <td>@lang('lang.city') :</td>
                     <td>{{$etudiant->ville}} </td>
                 </tr>
 
             </tbody>
         </table>
 
-<a class="btn btn-dark" href="/etudiants">Retour</a>
+<a class="btn btn-dark" href="/etudiants">@lang('lang.return')</a>
     </div>
 
 

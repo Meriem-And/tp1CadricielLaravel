@@ -31,6 +31,16 @@ class CreateTp1Table extends Migration
             $table->timestamps();
         });
 
+        Schema::create('articles', function (Blueprint $table) {
+            $table->id();
+            $table->string('titre', 100)->unique();
+            $table->string('contenu',8000);
+            $table->string('langue',2);
+            $table->unsignedBigInteger('user_id')->index();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->timestamps();
+        });
+
     }
 
     /**

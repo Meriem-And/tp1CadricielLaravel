@@ -2,18 +2,18 @@
 @extends('layout')
 @section('content')
     <div class="container">
-       <h1 class="m-5">Liste des etudiants  </h1>
-        <a href="/etudiants/ajouter" class="btn btn-dark">Ajouter un etudiant </a>
+       <h1 class="m-5">@lang('lang.students_list')  </h1>
+        <a href="/etudiants/ajouter" class="btn btn-dark">@lang('lang.add_student') </a>
 
         <table class="table table-sm">
             <thead>
             <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Nom</th>
-                <th scope="col">Adresse</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Date de naissance </th>
-                <th scope="col">Ville </th>
+                <th scope="col">@lang('lang.nom')</th>
+                <th scope="col">@lang('lang.adress')</th>
+                <th scope="col">Tel.</th>
+                <th scope="col">@lang('lang.birth_date') </th>
+                <th scope="col">@lang('lang.city') </th>
                 <th scope="col">
                    Action
                 </th>
@@ -35,9 +35,9 @@
 
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="/etudiants/{{$etudiant->etudiant_id}}">Détails</a></li>
-                                <li><a class="dropdown-item" href="/etudiants/modifier/{{$etudiant->etudiant_id}}">Modifier </a></li>
-                                <li><a class="dropdown-item" href="/etudiants/supprimer/{{$etudiant->etudiant_id}}">Supprimer</a></li>
+                                <li><a class="dropdown-item" href="/etudiants/{{$etudiant->etudiant_id}}">@lang('lang.details')</a></li>
+                                <li><a class="dropdown-item" href="/etudiants/modifier/{{$etudiant->etudiant_id}}">@lang('lang.modify') </a></li>
+                                <li><a class="dropdown-item" href="/etudiants/supprimer/{{$etudiant->etudiant_id}}">@lang('lang.delete')</a></li>
                             </ul>
                         </div>
 
