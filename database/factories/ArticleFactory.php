@@ -20,7 +20,7 @@ class ArticleFactory extends Factory
     {
         return [
             'titre' => $this->faker->word(),
-            'contenu' => $this->faker->words(20),
+            'contenu' => $this->faker->paragraph(15),
             'langue' => 'fr',
             'user_id' => $this->faker->randomElement(User::pluck('id'))
         ];
